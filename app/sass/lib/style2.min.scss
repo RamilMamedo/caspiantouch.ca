@@ -2841,7 +2841,7 @@ video:last-child {
 	overflow: hidden;
 }
 .cs-loader__logo {
-  white-space: nowrap;
+	white-space: nowrap;
 	color: #383c50;
 	font-family: "Woodford Bourne", sans-serif;
 	font-size: 30px;
@@ -3163,8 +3163,8 @@ input[type=submit]:hover {
 	font-weight: 100;
 	letter-spacing: .3px;
 	line-height: 16px;
-  vertical-align: top;
-  text-transform: uppercase;
+	vertical-align: top;
+	text-transform: uppercase;
 }
 .cs-top-header__links-item:last-child {
 	margin-right: 0;
@@ -4351,8 +4351,8 @@ input[type=submit]:hover {
 .cs-banner__title {
 	margin-bottom: 0;
 	color: #fff;
-  word-wrap: break-word;
-  text-transform: uppercase;
+	word-wrap: break-word;
+	text-transform: uppercase;
 }
 .cs-banner h1.cs-banner__title {
 	font-size: 90px;
@@ -4400,8 +4400,8 @@ input[type=submit]:hover {
 }
 .cs-banner__desc h6 {
 	color: #fff;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
 }
 .cs-banner__top-arrow {
 	position: absolute;
@@ -4468,13 +4468,13 @@ input[type=submit]:hover {
 }
 .cs-banner__btm-arrow span.contact-anchor {
 	display: block;
-  position: relative;
-  text-transform: uppercase;
-  font-weight: bold;
+	position: relative;
+	text-transform: uppercase;
+	font-weight: bold;
 	font-family: "Woodford Bourne", sans-serif;
-  color: #fff;
-  border: 3px solid #fff;
-  padding: 10px 25px;
+	color: #fff;
+	border: 3px solid #fff;
+	padding: 10px 25px;
 }
 
 .cs-banner__items-row {
@@ -11805,4 +11805,95 @@ span.wpcf7-not-valid-tip {
 .coca-sidebar .cs-form--xs-width {
 	margin-left: 0;
 	margin-right: auto;
+}
+
+$mst-color: #23252d; // Primary background color (deafualt: $primary-color)
+$mst-gutter: 23px; // Gap from corner (default: $column-gutter)
+$mst-button-size: 56px; // Size of circle button (default: rem-calc(56))
+$mst-icon: true !default; // Set false if you want to use your own sign directly inside html span element
+
+// ==========================================================================
+//   Mixins for material-scrolltop
+// ==========================================================================
+
+@mixin prefixer($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+
+@mixin centerer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include prefixer(transform, translate(-50%, -50%));
+}
+
+// ==========================================================================
+//   Stylesheet
+// ==========================================================================
+
+.material-scrolltop {
+	display: block;
+	position: fixed;
+	width: 0;
+	height: 0;
+	bottom: $mst-gutter;
+	right: $mst-gutter;
+	padding: 0;
+	overflow: hidden;
+	outline: none;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, .5);
+	cursor: hand;
+	border-radius: 50%;
+	background: $mst-color;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	@include prefixer(transition, all 0.3s cubic-bezier(0.25, 0.25, 0, 1));
+	@if $mst-icon {
+		@extend %mst-icon;
+	}
+
+	&:hover {
+		background-color: $mst-color;
+		text-decoration: none;
+		box-shadow: 0 3px 10px rgba(0, 0, 0, .5), 0 3px 15px rgba(0, 0, 0, .5);
+	}
+
+	&::before {
+		@include centerer;
+		content: "";
+		width: 0;
+		border-radius: 100%;
+		background: mix($mst-color, #fff, 85%);
+		@if $mst-icon {
+			@extend %mst-icon;
+		}
+	}
+
+	&:active::before {
+		width: 120%;
+		padding-top: 120%;
+		@include prefixer(transition, all .2s ease-out);
+	}
+
+	&.reveal {
+		width: $mst-button-size;
+		height: $mst-button-size;
+	}
+
+	span {
+		display: block;
+		font-size: 25px;
+		color: #fff;
+	}
+}
+
+%mst-icon {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16px' height='16px' viewBox='0 0 16 16' enable-background='new 0 0 16 16' xml:space='preserve'%3E%3Cpolygon fill='%23FFFFFF' points='8,2.8 16,10.7 13.6,13.1 8.1,7.6 2.5,13.2 0,10.7 '/%3E%3C/svg%3E");
+	background-position: center 50%;
+	background-repeat: no-repeat;
 }

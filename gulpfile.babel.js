@@ -33,8 +33,9 @@ const
         //  You can specify the path to JavaScript libs that you're going to use in this `libs` array,
         //  so gulp will concat and minifying them into the one final file.
         libs: [
-          './app/js/lib/initMap.js',
           './app/js/lib/jquery.js',
+          './app/js/lib/material-scrolltop.js',
+          './app/js/lib/initMap.js',
           './app/js/lib/jquery-migrate.min.js',
           './app/js/lib/jquery.themepunch.tools.min.js',
           './app/js/lib/jquery.blockUI.min.js',

@@ -396,7 +396,7 @@
       $('.js-filter-menu').removeAttr('style');
     }
   }
-  
+
 
   $(window).resize(function () {
     if($(window).width() > 1024){
@@ -1524,10 +1524,10 @@ $(window).on('resize', function (){
         }
     }
     oldString = oldString.slice(0, -numberLength);
- 
+
     return oldString;
  }
- 
+
   /* ------------------------------------------- */
   /* WINDOW LOAD */
   /* ------------------------------------------- */
@@ -1586,5 +1586,19 @@ $(window).on('resize', function (){
     asideFixed();
     parallaxBanner();
   });
+
+  // Initialize material-scrolltop with (minimal)
+  $('body').materialScrollTop();
+
+//   $('body').materialScrollTop({   // Scroll to the top of <body> element ...
+//     padding: 100,               // ... and add padding 100px
+//     revealElement: 'header',    // Reveal button when scrolling over <header> ...
+//     revealPosition: 'bottom',   // ... and do it at the end of </header> element
+//     duration: 600,              // Animation will run 600 ms
+//     easing: 'swing',            // Do it with swing animation
+//     onScrollEnd: function() {   // Give me some log when animation ends
+//         console.log('This is the end, my only friend, the end...');
+//     }
+// });
 
 })(jQuery, window, document);
