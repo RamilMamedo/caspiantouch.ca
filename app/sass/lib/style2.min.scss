@@ -3207,6 +3207,10 @@ input[type=submit]:hover {
 	letter-spacing: .6px;
 	line-height: 16px;
 }
+.cs-top-header__desc p a:hover{
+  text-decoration: underline;
+  color:inherit;
+}
 .cs-logo {
 	position: relative;
 }
@@ -3639,7 +3643,7 @@ input[type=submit]:hover {
 	-webkit-transition: background-color .2s ease;
 	-o-transition: background-color .2s ease;
 	transition: background-color .2s ease;
-	background-color: transparent;
+	// background-color: transparent;
 }
 .cs-header--scroll-menu .cs-header__wrapp {
 	position: fixed;
@@ -3658,20 +3662,15 @@ input[type=submit]:hover {
 	visibility: visible;
 }
 .cs-header--fixed:not([class$="-menu"]) .cs-nav-menu__text {
-	color: #fff;
+	color: #000;
 }
-.cs-header--fixed:not([class$="-menu"]) .cs-nav-menu__icon i {
-	background-color: #fff;
-}
+.cs-header--fixed:not([class$="-menu"]) .cs-nav-menu__icon i,
 .cs-header--fixed:not([class$="-menu"]) .cs-nav-menu__icon i:after,
 .cs-header--fixed:not([class$="-menu"]) .cs-nav-menu__icon i:before {
-	background-color: #fff;
+	background-color: #000;
 }
-.cs-header--fixed:not([class$="-menu"]) .cs-socials--menu .cs-socials__item a {
-	color: #fff;
-}
-.cs-header--fixed:not([class$="-menu"]) .cs-socials--menu .cs-socials__item a:hover {
-	color: rgba(255, 255, 255, .7);
+.header-logo {
+  height: 60px;
 }
 .cs-header--fixed:not([class$="-menu"]) .cs-filter-menu-icon {
 	border: 2px solid #fff;
@@ -3681,15 +3680,6 @@ input[type=submit]:hover {
 .cs-header--fixed:not([class$="-menu"]) .cs-filter-menu-icon:hover {
 	background-color: #fff;
 	color: #191919;
-}
-.cs-header--fixed:not([class$="-menu"]) .main-menu > li > a {
-	color: #fff;
-}
-.cs-header--fixed:not([class$="-menu"]) .main-menu > li.current-menu-ancestor > a,
-.cs-header--fixed:not([class$="-menu"]) .main-menu > li.current-menu-item > a,
-.cs-header--fixed:not([class$="-menu"]) .main-menu > li.current-menu-parent > a,
-.cs-header--fixed:not([class$="-menu"]) .main-menu > li:hover > a {
-	color: rgba(255, 255, 255, .7);
 }
 .admin-bar .cs-header--fixed.cs-header--scroll-menu .cs-header__wrapp {
 	top: 32px;
@@ -6037,7 +6027,6 @@ span.wpcf7-not-valid-tip {
 	}
 }
 .cs-address__item {
-	display: inline-block;
 	margin-right: 23px;
 	margin-bottom: 15px;
 }

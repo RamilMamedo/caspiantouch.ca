@@ -36,6 +36,7 @@ const
           './app/js/lib/jquery.js',
           './app/js/lib/material-scrolltop.js',
           './app/js/lib/initMap.js',
+          './app/js/lib/google-map-apis.js',
           './app/js/lib/jquery-migrate.min.js',
           './app/js/lib/jquery.themepunch.tools.min.js',
           './app/js/lib/jquery.blockUI.min.js',

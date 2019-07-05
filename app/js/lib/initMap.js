@@ -1,23 +1,24 @@
 
 // Initialize and add the map
 function initMap() {
-
-    var paris = {lat: 48.862226, lng: 2.344998};
-    var prague = {lat: 50.075893, lng: 14.435405};
-    var vienna = {lat: 48.208704, lng: 16.382800};
+    var kitchener = {lat: 43.451600, lng: -80.492500};
+    var mississauga = {lat: 43.589000, lng: -79.644100};
+    var burlington = {lat: 43.325500, lng: -79.799000};
+    var niagara = {lat: 43.058200, lng: -79.290200};
+    var brampton = {lat: 43.731500, lng: -79.762400};
     var icon_marker = {
         url: "./img/location-01.png",
         origin: new google.maps.Point(0, 0),
-        size: new google.maps.Size(55, 55),
-        scaledSize: new google.maps.Size(55, 55),
+        size: new google.maps.Size(44, 44),
+        scaledSize: new google.maps.Size(44, 44),
     }
-    // The location of Uluru
-    var uluru = {lat: 49.337133, lng: 9.384993};
-    // The map, centered at Uluru
+    // The location of toronto
+    var toronto = {lat: 43.653200, lng: -79.383200};
+    // The map, centered at toronto
     var map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 6,
-            center: uluru,
+            zoom: 8,
+            center: toronto,
             zoomControl: false,
             mapTypeControl: false,
             streetViewControl: false,
@@ -166,21 +167,30 @@ function initMap() {
             ]
 
         });
-    // The marker, positioned at Uluru
+    // The marker, positioned at toronto
     var marker = new google.maps.Marker({
-        position: paris,
+        position: kitchener,
         map: map,
         icon:  icon_marker
     });
     var marker2 = new google.maps.Marker({
-        position: prague,
+        position: mississauga,
         map: map,
         icon:  icon_marker
     });
     var marker3 = new google.maps.Marker({
-        position: vienna,
+        position: burlington,
         map: map,
         icon:  icon_marker
     });
-
+      var marker4 = new google.maps.Marker({
+      position: niagara,
+      map: map,
+      icon:  icon_marker
+  });
+      var marker5 = new google.maps.Marker({
+      position: brampton,
+      map: map,
+      icon:  icon_marker
+  });
 }
