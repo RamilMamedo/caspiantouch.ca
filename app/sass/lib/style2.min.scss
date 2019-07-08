@@ -5808,7 +5808,7 @@ list-style:none;
 .cs-testimonials__info {
 	position: relative;
 	margin-bottom: 30px;
-	padding: 40px 29px 32px;
+	padding: 30px;
 	-webkit-box-shadow: 6.5px 11.3px 16.6px 1.4px rgba(40, 43, 49, .13);
 	box-shadow: 6.5px 11.3px 16.6px 1.4px rgba(40, 43, 49, .13);
 }
@@ -5847,7 +5847,8 @@ list-style:none;
 	z-index: 10;
 }
 .cs-testimonials__description p {
-	color: rgba(56, 60, 80, .5);
+  color: rgba(56, 60, 80, .5);
+  font-size: 12px;
 }
 .cs-testimonials__user-img {
 	display: inline-block;
