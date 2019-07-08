@@ -95,6 +95,12 @@ export const clear = () => {
   return del(paths.dist.root);
 };
 
+//  Create docs directory for GitHub pages.
+export const docs = () => {
+ return gulp.src('./dist/**/*')
+  .pipe(gulp.dest('./docs/'));
+};
+
 //  Moving website's utils, credentials, fonts, and etc. to the production directory.
 export const utils = () => {
   const
