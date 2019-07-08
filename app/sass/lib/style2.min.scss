@@ -4079,9 +4079,10 @@ input[type=submit]:hover {
 	display: none;
 }
 .cs-filter-content {
-	position: relative;
-	padding-top: 120px;
-	padding-bottom: 97px;
+  position: relative;
+  padding: 60px 0;
+	// padding-top: 120px;
+	// padding-bottom: 97px;
 	background-color: #fff;
 }
 @media screen and (max-width: 1199px) {
@@ -4238,7 +4239,8 @@ input[type=submit]:hover {
 	display: none;
 }
 .cs-filter-content__desc + .cs-filter-content__list {
-	margin-top: 42px;
+  margin-top: 60px;
+  flex-direction: column;
 }
 @media screen and (max-width: 1199px) {
 	.cs-filter-content__desc + .cs-filter-content__list {
@@ -4255,12 +4257,14 @@ input[type=submit]:hover {
 	-ms-flex-pack: center;
 	justify-content: center;
 	margin: 0;
-	padding: 0;
+  padding: 0;
+  margin-top: 60px;
 }
 .cs-filter-content__item {
+  width: fit-content;
 	display: block;
 	position: relative;
-	margin: 10px 15px;
+	margin: 10px auto;
 	-webkit-transition: color .3s ease-in, border .3s ease-in;
 	-o-transition: color .3s ease-in, border .3s ease-in;
 	transition: color .3s ease-in, border .3s ease-in;
@@ -4456,7 +4460,7 @@ input[type=submit]:hover {
 		bottom: 15px;
 	}
 }
-.cs-banner__btm-arrow span.contact-anchor {
+.cs-banner__btm-arrow a.contact-anchor {
 	display: block;
 	position: relative;
 	text-transform: uppercase;
@@ -4533,6 +4537,7 @@ input[type=submit]:hover {
 	opacity: 1;
 }
 .js-parallax-banner-item {
+  background-position: center;
 	position: absolute;
 	top: 0;
 	left: 0;
