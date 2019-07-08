@@ -49,6 +49,7 @@ const
           './app/js/lib/tweenMax.min.js',
           './app/js/lib/vivus.min.js',
           './app/js/lib/slick.min.js',
+          './app/js/lib/smooth-scroll.min.js',
           './app/js/lib/hammer.min.js',
           './app/js/lib/jquery.fitvids.js',
           './app/js/lib/script.js',
