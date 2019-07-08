@@ -162,7 +162,7 @@
         </div>
       </div>
     </header>
-    <div class="cs-main-wrapp__inner">
+    <div class="cs-main-wrapp__inner woocommerce woocommerce-page">
       <div class="container padd-only-xs">
         <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row-fluid row-no-padding">
           <div class="column_container col-sm-12 ">
@@ -906,7 +906,7 @@
                   <div class="">
                     <div role="form" class="wpcf7" id="wpcf7-f5338-p961-o1" lang="en-US" dir="ltr">
                       <div class="screen-reader-response"></div>
-                      <form method="post" class="wpcf7-form form contact-form cs-form" novalidate="novalidate">
+                      <form action="https://formspree.io/xjjpqdwx" method="POST" class="wpcf7-form form contact-form cs-form" novalidate="novalidate">
                         <div style="display: none;">
                           <input type="hidden" name="_wpcf7" value="5338" />
                           <input type="hidden" name="_wpcf7_version" value="5.1.1" />
@@ -925,14 +925,38 @@
                           <div class="col-md-6 col-sm-6">
                             <label for="person-number">Phone <span>*</span></label>
                             <span class="wpcf7-form-control-wrap your-phone">
-                              <input type="number" name="your-phone" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" id="person-number" aria-required="true" aria-invalid="false" />
+                              <input type="tel" name="your-phone" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" id="person-number" aria-required="true" aria-invalid="false" />
                             </span>
                           </div>
-                          <div class="col-sm-12">
-                            <label for="person-email">Mail <span>*</span></label>
+                          <div class="col-md-6 col-sm-6">
+                            <label for="person-email">Email <span>*</span></label>
                             <span class="wpcf7-form-control-wrap your-email">
                               <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="person-email" aria-required="true" aria-invalid="false" />
                             </span>
+                          </div>
+                          <div class="col-md-6 col-sm-6">
+                            <label for="zipcode">ZIP Code <span>*</span></label>
+                            <span class="wpcf7-form-control-wrap your-zipcode">
+                              <input type="text" name="your-zipcode" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="zipcode" aria-required="true" aria-invalid="false" />
+                            </span>
+                          </div>
+                          <div class="col-md-6 col-sm-6">
+                            <div class="woocommerce-account-fields">
+                              <p class="form-row form-row-wide create-account">
+                                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                                  <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="kitchen" type="checkbox" name="kitchen" value="1">
+                                  <span>Kitchen Installation</span>
+                                </label>
+                              </p>
+                            </div>
+                            <div class="woocommerce-account-fields">
+                              <p class="form-row form-row-wide create-account">
+                                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                                  <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="other" type="checkbox" name="other" value="1">
+                                  <span>Other Installation</span>
+                                </label>
+                              </p>
+                            </div>
                           </div>
                           <div class="col-sm-12">
                             <label for="person-massage">Message <span>*</span></label>
@@ -954,18 +978,16 @@
           </div>
         </div>
         <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="row row-fluid row-no-padding">
-          <div class="column_container col-sm-12 ">
-            <div class="column-inner ">
-              <div>
-                <div class="ugm-map-wrapper" style="background: red;"">
-              <div style=" height: 600px" id="map" style="background: red;"></div>
+          <div class="column_container col-sm-12">
+            <div class="column-inner">
+              <div class="ugm-map-wrapper">
+                <div style=" height: 600px" id="map"></div>
               </div>
             </div>
           </div>
         </div>
+        <div class="row-full-width clearfix"></div>
       </div>
-      <div class="row-full-width clearfix"></div>
-    </div>
     </div>
   </main>
   <footer class="cs-footer cs-footer--full">
