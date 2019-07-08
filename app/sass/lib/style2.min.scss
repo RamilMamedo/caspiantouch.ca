@@ -5803,9 +5803,12 @@ list-style:none;
 	background-color: #383c50;
 }
 .cs-testimonials__item {
+  width: 350px;
 	padding: 0 15px;
 }
 .cs-testimonials__info {
+  height: 320px; //height
+
 	position: relative;
 	margin-bottom: 30px;
 	padding: 30px;

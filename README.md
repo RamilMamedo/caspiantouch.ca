@@ -1,4 +1,4 @@
-# BB8 - Starter Kit <img src="https://user-images.githubusercontent.com/38986496/54271996-20433180-459c-11e9-8ba1-198fa1147ef4.png" alt="BB8" width="38" height="38"/>
+# BB8 - Starter Kit <img src="https://user-images.githubusercontent.com/38986496/54271996-20433180-459c-11e9-8ba1-198fa1147ef4.png" alt="Caspian Touch LTD" width="38" height="38"/>
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/RamilMamedo/bb8/pulls)
 [![dependencies Status](https://david-dm.org/RamilMamedo/bb8/status.svg)](https://david-dm.org/RamilMamedo/bb8)
@@ -6,7 +6,7 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/RamilMamedo/bb8/blob/master/LICENCE)
 
 
-Starter kit for automating tasks in everyday front-end development. 👨🏻‍💻 ⚡️ 🛠  ✨ 🤖
+Caspian Touch LTD is a professional and experienced kitchen and furniture design company. 👨🏻‍💻 ⚡️ 🛠  ✨ 🤖
 
 ## Installation ⬇️
 

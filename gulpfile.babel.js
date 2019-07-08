@@ -134,7 +134,7 @@ export const favicons = () => {
     settings = {
       appName: 'BB8',
       appShortName: 'BB8',
-      appDescription: 'Starter kit for automating tasks in everyday front-end development.',
+      appDescription: 'Caspian Touch LTD is a professional and experienced kitchen and furniture design company.',
       dir: 'ltr',
       lang: 'en-US',
       background: '#fff',
@@ -245,7 +245,7 @@ export const server = done => {
     port: 2020,
     open: true,
     notify: false,
-    https: true,
+    // https: true,
 //  tunnel: true,
 //  tunnel: 'BB8' //  Demonstration page: http://BB8.localtunnel.me
   });
@@ -303,7 +303,7 @@ export const html = () => {
       .pipe($.plumber())
       .pipe($.rigger())
       .pipe($.htmlBeautify({ indent_size: 2, preserve_newlines: false }))
-  //  .pipe($.htmlmin({ collapseWhitespace: true }))  // (Optional) enable if you want to minify html files for production.
+      .pipe($.htmlmin({ collapseWhitespace: true }))  // (Optional) enable if you want to minify html files for production.
   //  .pipe($.htmllint()) // (Optional) enable if you need to lint your HTML files.
   //  .pipe(validator())  // (Optional) enable if you need to check the markup validity by W3C.
   //  .pipe(validator.reporter()) // (Optional) enable if you need to check the markup validity by W3C.
@@ -322,8 +322,8 @@ export const css = () => {
   const
     //  Files to search through for used classes (HTML, JS and etc., basically anything that uses CSS selectors).
     purifyContent = [
-      './dist/js/*.js',
-      './dist/*.html'
+      './app/js/**/*.js',
+      './app/layouts/**/*.html'
     ],
     styleLintSetting = {
       debug: true,
@@ -340,9 +340,9 @@ export const css = () => {
       .src(paths.app.styles.main)
       .pipe($.plumber())
       .pipe($.sass({ outputStyle: 'compressed' }))
-      // .pipe($.purifycss(purifyContent)) // (Optional) disable if you don't want to cut unused CSS.
+      .pipe($.purifycss(purifyContent)) // (Optional) disable if you don't want to cut unused CSS.
       // .pipe($.postcss(plugins)) // (Optional) disable if you don't want to use PostCSS plugins.
-      // .pipe($.csso())
+      .pipe($.csso())
       .pipe($.rename({ suffix: '.min' }))
   //  .pipe($.stylelint(styleLintSetting)) // (Optional) enable if you need to lint final CSS file.
       .pipe(gulp.dest(paths.dist.css))
