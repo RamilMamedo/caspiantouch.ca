@@ -239,8 +239,8 @@ export const server = done => {
     },
     port: 2020,
     open: true,
-    notify: false
-//  https: true,
+    notify: false,
+    https: true,
 //  tunnel: true,
 //  tunnel: 'BB8' //  Demonstration page: http://BB8.localtunnel.me
   });

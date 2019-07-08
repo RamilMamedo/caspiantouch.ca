@@ -10715,7 +10715,7 @@ list-style:none;
 	content: '';
 	height: 16px;
 	left: 0;
-	top: 12px;
+	top: 3px;
 	width: 16px;
 }
 .woocommerce form .form-row .woocommerce-form__label span:after,
@@ -10725,7 +10725,7 @@ list-style:none;
 	font-size: 12px;
 	left: 2px;
 	opacity: 0;
-	top: 8px;
+	top: 1px;
 	-webkit-transition: .3s opacity;
 	-o-transition: .3s opacity;
 	transition: .3s opacity;
@@ -10733,6 +10733,10 @@ list-style:none;
 .woocommerce form .form-row .woocommerce-form__label input,
 .woocommerce-page form .form-row .woocommerce-form__label input {
 	display: none;
+}
+.woocommerce-account-fields {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 .woocommerce form .form-row .woocommerce-form__label input:checked + span:after,
 .woocommerce-page form .form-row .woocommerce-form__label input:checked + span:after {
