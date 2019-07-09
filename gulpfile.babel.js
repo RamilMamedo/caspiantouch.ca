@@ -332,7 +332,7 @@ export const css = () => {
     plugins = [
       require('autoprefixer')(),
       require('css-mqpacker')({ sort: true }),
-      require('cssnano')({ safe: true }),
+      // require('cssnano')({ safe: true }),
       require('css-declaration-sorter')({ order: 'smacss' })
     ];
   return (
@@ -393,6 +393,6 @@ export const watchFiles = () => {
 export const credentials = gulp.series(favicons, utils, img);
 export const main = gulp.parallel(img, utils, html, js, css);
 export const watch = gulp.parallel(watchFiles, server);
-export const build = gulp.series(clear, main);
+export const build = gulp.series(clear, main, docs);
 export const dev = gulp.series(main, watch);
 exports.default = dev;
