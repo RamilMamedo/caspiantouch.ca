@@ -10263,6 +10263,8 @@ button[type=submit],input[type=submit] {
 
 .cs-header--fixed .cs-header__wrapp {
   position: absolute;
+  position: static !important;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -10924,7 +10926,7 @@ button[type=submit],input[type=submit] {
 
 .cs-filter-content__desc+.cs-filter-content__list {
   margin-top: 60px;
-  flex-direction: column;
+  // flex-direction: column;
 }
 
 @media screen and (max-width:1199px) {
